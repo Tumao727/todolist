@@ -2,12 +2,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo List</title>
+    <link rel="stylesheet" href="todo.css">
+    <title>To-Do List</title>
 </head>
 <body>
-    <div>
+    <div id="container">
+        <h1>To-Do List</h1>
         <input type="text" id="id-input-content">
         <button id="id-button-add">Add</button>
+
+        <ul id="id-ul-container">
+            <li class="todo-cell">
+                <span class="todo-delete">✘</span>
+                <span class="todo-done">✔</span>
+                <span class="todo-text">在这里填写</span>
+            </li>
+            <li class="todo-cell">
+                <span class="todo-delete">✘</span>
+                <span class="todo-done">✔</span>
+                <span class="todo-text">今天想做的事</span>
+            </li>
+        </ul>
     </div>
+
+    <script src="tumao.js"></script>
+    <script src="todo.js"></script>
 </body>
 </html>
