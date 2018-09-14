@@ -1,10 +1,50 @@
+body {
+    font-family: 'Roboto Slab', 'Microsoft YaHei', serif;
+}
+
 #container {
     width: 360px;
-    margin: 0 auto;
-    border: gray solid 1px;
+    margin: 100px auto;
+    background: #f1f2f6;
+    box-shadow: 0 0 3px #00000002;
+}
+
+h1 {
+    background: #1e90ff;
+    color: #ffffff;
+    margin: 0;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+input {
+    font-size: 18px;
+    background-color: #f1f2f6;
+    width: 100%;
+    padding: 13px 13px 13px 20px;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    background-color: #ffffff;
+    color: #2f3542;
+    height: 40px;
+    line-height: 40px;
+}
+
+li:nth-child(2n) {
+    background-color: #f1f2f6;
 }
 
 .completed {
-    color: gray;
+    color: #a4b0be;
     text-decoration: line-through;
 }

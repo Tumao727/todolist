@@ -4,7 +4,7 @@ const saveTodo = (todos, todo) => {
     localStorage.saveTodos = s
 }
 
-const deleteTodo = (container, todoCell) => {   
+const deleteTodo = (container, todoCell) => {
     for (let i = 0; i < container.children.length; i++) {
         var cell = container.children[i]
         if (cell === todoCell) {    
@@ -48,16 +48,19 @@ const todoTemplate = (todo) => {
 }
 
 const bindEventAdd = (todos) => {
-    let ele = e('#id-button-add')
-    bindEvent(ele, 'click', () => {
+    let ele = e('#id-input-content')
+    bindEvent(ele, 'keydown', (event) => {
         let todo = e('input').value
-        if (todo !== '') {
-            saveTodo(todos, todo)
-            let v = todoTemplate(todo)
-            let element = e('ul')
-            appendHtml(element, v)
-        } else {
-            alert('请输入文本')
+        let keyName = event.keyCode
+        if (keyName === 13) {
+            if (todo !== '') {
+                saveTodo(todos, todo)
+                let v = todoTemplate(todo)
+                let element = e('ul')
+                appendHtml(element, v)
+            } else {
+                alert('请输入文本')
+            }
         }
     })
 }
