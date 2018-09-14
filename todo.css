@@ -82,6 +82,10 @@ li:last-child {
     transition: 0.2s linear;
 }
 
+li:hover {
+    cursor: default;
+}
+
 li:hover #id-span-delete {
     opacity: 1;
     width: 40px;
