@@ -39,8 +39,8 @@ const insertTodos = (todos) => {
 const todoTemplate = (todo) => {
     let t = `
         <li class='todo-cell'>
-            <span class="todo-delete">✘</span>
-            <span class="todo-done">✔</span>
+            <span id="id-span-delete"><i class="far fa-trash-alt todo-delete"></i></span>
+            <i class="far fa-square todo-done"></i>
             <span class="todo-text">${todo}</span>
         </li>
     `
@@ -65,7 +65,7 @@ const bindEventAdd = (todos) => {
     })
 }
 
-const bindEventDelegate = () => {
+const bindEventDelegate = (todo) => {
     let element = e('#id-ul-container')
     bindEvent(element, 'click', (event) => {
         let target = event.target
@@ -76,6 +76,8 @@ const bindEventDelegate = () => {
         if (target.classList.contains('todo-done')) {
             let itemClicked = item.querySelector('.todo-text')
             itemClicked.classList.toggle('completed')
+            target.classList.toggle('fa-check-square')
+            target.classList.toggle('fa-square')
         }
     })
 }
